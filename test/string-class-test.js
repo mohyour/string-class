@@ -13,15 +13,15 @@ describe('String Class Test', () => {
 
   describe('To uppercase', () => {
     it('should return the uppercase of string', () => {
-      assert.equal('change'.toUpper(), 'CHANGE');
-      assert.equal('development'.toUpper(), 'DEVELOPMENT');
+      assert.equal('chanGe'.toUpper(), 'CHANGE');
+      assert.equal('deveLopment'.toUpper(), 'DEVELOPMENT');
     });
   });
 
   describe('To lowercase', () => {
     it('should return the lowercase of string', () => {
       assert.equal('chaNGe'.toLower(), 'change');
-      assert.equal('Alrigt'.toLower(), 'alright');
+      assert.equal('Alright'.toLower(), 'alright');
     });
   });
 
@@ -47,44 +47,44 @@ describe('String Class Test', () => {
 
   describe('Word Count', () => {
     it('should return the number of word in the string', () => {
-      assert.Equal('We are having fun'.wordCount(), 4);
+      assert.equal('We are having fun'.wordCount(), 4);
     });
   });
 
   describe('To Currency', () => {
     it('should return a currency representation of the string', () => {
-      assert.Equal('11111.11'.toCurrency(), '11,111.11');
+      assert.equal('11111.11'.toCurrency(), '11,111.11');
     });
   });
 
   describe('From Currency', () => {
     it('should return a number representation of the currency string', () => {
-      assert.Equal('11,111.11'.fromCurrency(), '11111.11');
+      assert.equal('11,111.11'.fromCurrency(), '11111.11');
     });
   });
 
   describe('Inverse Case', () => {
     it('should return each letter in the string as an inverse of its current case', () => {
-      assert.Equal('Mr. Ben'.inverseCase(), 'mR. bEN');
+      assert.equal('Mr. Ben'.inverseCase(), 'mR. bEN');
     });
   });
 
   describe('Alternating Case', () => {
     it('should return the letters in alternating cases', () => {
-      assert.Equal('Onomatopoeia'.inverseCase(), 'oNoMaToPoEiA');
+      assert.equal('Onomatopoeia'.inverseCase(), 'oNoMaToPoEiA');
     });
   });
 
   describe('Get Middle', () => {
     it('should return the character(s) in the middle of the string', () => {
-      assert.Equal('read'.getMiddle(), 'ea');
-      assert.Equal('Amity'.getMiddle(), 'i');
+      assert.equal('read'.getMiddle(), 'ea');
+      assert.equal('Amity'.getMiddle(), 'i');
     });
   });
 
   describe('Number Words', () => {
     it('should return the numbers in words', () => {
-      assert.Equal('325'.numberWords(), 'three two five');
+      assert.equal('325'.numberWords(), 'three two five');
     });
   });
 
