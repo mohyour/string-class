@@ -71,7 +71,7 @@ describe('String Class Test', () => {
 
   describe('Alternating Case', () => {
     it('should return the letters in alternating cases', () => {
-      assert.equal('Onomatopoeia'.inverseCase(), 'oNoMaToPoEiA');
+      assert.equal('Onomatopoeia'.alternatingCase(), 'oNoMaToPoEiA');
     });
   });
 
