@@ -39,6 +39,28 @@ const stringClass = {
     return this.words().length;
   },
 
+  reverseWord() {
+    return this.split('').reverse().join('');
+  },
+
+  toCurrency() {
+    const onThreeCount = /\d{3}/g;
+    const splitCurrency = this.split('.');
+    const decimalPart = splitCurrency[1];
+    const wholePart = splitCurrency[0];
+    const newWhole = wholePart.reverseWord()
+      .replace(onThreeCount, (number) => {
+        return `${number},`;
+      })
+      .reverseWord();
+    return `${newWhole}.${decimalPart}`;
+  },
+
+  fromCurrency() {
+    const comma = /,/g;
+    return this.replace(comma, '');
+  },
+
   inverseCase() {
     const allCase = /[A-Za-z]/g;
     return this.replace(allCase, (char) => {
@@ -62,6 +84,25 @@ const stringClass = {
       return this[midPosition - 1];
     }
     return `${this[midPosition - 1]}${this[midPosition]}`;
+  },
+
+  numberWords() {
+    const numbersMap = {
+      0: 'zero',
+      1: 'one',
+      2: 'two',
+      3: 'three',
+      4: 'four',
+      5: 'five',
+      6: 'six',
+      7: 'seven',
+      8: 'eight',
+      9: 'nine'
+    };
+    const dig = /\d/g;
+    return this.replace(dig, (num) => {
+      return `${numbersMap[num]} `;
+    }).trim();
   },
 
   isDigit() {
