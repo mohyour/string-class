@@ -19,6 +19,7 @@
     "class-methods-use-this": 0,
     "no-prototype-builtins": 0,
     "no-bitwise": 0,
+    "no-trailing-spaces": 0,
     "arrow-body-style": ["error", "always"],
     "comma-dangle": 0,
     "curly": ["error", "multi-line"],
