@@ -108,13 +108,15 @@ const stringClass = {
    */
   toCurrency() {
     const onThreeCount = /\d{3}/g;
+    const trailingComma = /,$/g;
     const splitCurrency = this.split('.');
-    const decimalPart = splitCurrency[1];
+    const decimalPart = splitCurrency[1] || '00';
     const wholePart = splitCurrency[0];
     const newWhole = wholePart.reverseWord()
       .replace(onThreeCount, (number) => {
         return `${number},`;
       })
+      .replace(trailingComma, '')
       .reverseWord();
     return `${newWhole}.${decimalPart}`;
   },
@@ -127,8 +129,8 @@ const stringClass = {
    * @return {String} Current format of string.
    */
   fromCurrency() {
-    const comma = /,/g;
-    return this.replace(comma, '');
+    const toRemove = /(,|.00)/g;
+    return this.replace(toRemove, '');
   },
 
   /**
@@ -197,8 +199,8 @@ const stringClass = {
       8: 'eight',
       9: 'nine'
     };
-    const dig = /\d/g;
-    return this.replace(dig, (num) => {
+    const digits = /\d/g;
+    return this.replace(digits, (num) => {
       return `${numbersMap[num]} `;
     }).trim();
   },
