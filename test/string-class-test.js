@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 const assert = require('chai').assert;
 require('../src/string-class');
 
