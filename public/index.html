@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>String Class</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <p>String Class Extension</p>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="well">
+      <p> Using Prototype Oriented Programming, methods, procedures and instance attributes are added to the String class to
+        support more string manipulation features.</p>
+      <ul>
+        <div class="row">
+          <div class="col-lg-4">
+            <li><span class="bold">hasVowels:</span> Checks if the string contains vowels.</li>
+            <li><span class="bold">toUpper:</span> Converts string to uppercase characters.</li>
+            <li><span class="bold">toLower:</span> Converts string to lowercase characters.</li>
+            <li><span class="bold">ucFirst:</span> Converts the first character of a string to uppercase.</li>
+            <li><span class="bold">isQuestion:</span> Checks if the string is a question.</li>
+            <li><span class="bold">words:</span> Returns the list of words in string as an array.</li>
+          </div>
+          <div class="col-lg-4">
+            <li><span class="bold">wordCount:</span> Counts the number of words in a string.</li>
+            <li><span class="bold">toCurrency:</span> Converts the string to a currency format.</li>
+            <li><span class="bold">fromCurrency:</span> Converts the string from currency format to number.</li>
+            <li><span class="bold">inverseCase:</span> Returns the string passed in with inverted character cases.</li>
+            <li><span class="bold">alternatingCase:</span> Returns the string passed in with alternating character cases starting with lowercase.</li>
+          </div>
+          <div class="col-lg-4">
+            <li><span class="bold">getMiddle:</span> Returns the character(s) in the middle of the string.</li>
+            <li><span class="bold">numberWords:</span> Returns the words equivalent of the number passed in.</li>
+            <li><span class="bold">isDigit:</span> Checks if the string is a single digit.</li>
+            <li><span class="bold">doubleCheck:</span> Checks if the string contains double characters.</li>
+          </div>
+        </div>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <form>
+          <div>
+            <div class="form-group">
+              <label for="input">Enter string:</label>
+              <input type="text" id="input" class="form-control" placeholder="Enter String">
+            </div>
+            <label for="method">Select method</label>
+            <select class="form-control" id="method">
+                <option value="hasVowels">hasVowels</option>
+                <option value="toUpper">toUpper</option>
+                <option value="toLower">toLower</option>
+                <option value="ucFirst">ucFirst</option>
+                <option value="isQuestion">isQuestion</option>
+                <option value="words">words</option>
+                <option value="wordCount">wordCount</option>
+                <option value="toCurrency">toCurrency</option>
+                <option value="fromCurrency">fromCurrency</option>
+                <option value="inverseCase">inverseCase</option>
+                <option value="alternatingCase">alternatingCase</option>
+                <option value="getMiddle">getMiddle</option>
+                <option value="numberWords">numberWords</option>
+                <option value="isDigit">isDigit</option>
+                <option value="doubleCheck">doubleCheck</option>
+
+            </select> <br>
+            <button type="button" class="btn btn-default" onclick="getResult()">Get Result</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group">
+          <label for="result">Result:</label>
+          <textarea class="form-control" rows="5" id="result"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../src/string-class.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
