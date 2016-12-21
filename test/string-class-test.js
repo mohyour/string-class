@@ -1,6 +1,4 @@
-const chai = require('chai');
-
-const assert = chai.assert;
+const assert = require('chai').assert;
 require('../src/string-class');
 
 describe('String Class Test', () => {
@@ -8,11 +6,13 @@ describe('String Class Test', () => {
     it('should return true if string contains vowel', () => {
       assert.isTrue('hello'.hasVowels());
       assert.isTrue('UmbrEllA'.hasVowels());
+      assert.isTrue('c@m3ra'.hasVowels());
     });
 
     it('should return false if string does not contains vowel', () => {
       assert.isFalse('hmmm'.hasVowels());
       assert.isFalse('myth'.hasVowels());
+      assert.isFalse('c@t'.hasVowels());
     });
   });
 
@@ -34,13 +34,18 @@ describe('String Class Test', () => {
     it('should return the first character of string in uppercase', () => {
       assert.equal('change'.ucFirst(), 'Change');
       assert.equal('firstChar'.ucFirst(), 'FirstChar');
+      assert.equal('the First in upperCase'.ucFirst(), 'The First in upperCase');
     });
   });
 
   describe('Is Question', () => {
     it('should check if string is a question', () => {
       assert.isTrue('Where are you?'.isQuestion());
-      assert.isTrue('What?'.isQuestion());
+    });
+
+    it('should return false if string has more than a question mark', () => {
+      assert.isFalse('Where are you???'.isQuestion());
+      assert.isFalse('What? You say?'.isQuestion());
     });
 
     it('should check if string is not a question', () => {
