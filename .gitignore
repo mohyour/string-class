@@ -1,1 +1,3 @@
-node_modulesgit
+node_modules
+coverage
+.coveralls.yml
