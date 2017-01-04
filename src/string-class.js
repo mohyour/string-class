@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 const stringClass = {
   /**
    * Has Vowels
@@ -129,7 +130,7 @@ const stringClass = {
    * @return {String} Current format of string.
    */
   fromCurrency() {
-    const toRemove = /(,|.00|£$¤€¢¥₧ƒ)/g;
+    const toRemove = /(.00|[^0-9a-zA-Z\.])/g;
     return this.replace(toRemove, '');
   },
 
@@ -202,7 +203,8 @@ const stringClass = {
     const digits = /\d/g;
     return this.replace(digits, (num) => {
       return `${numbersMap[num]} `;
-    }).trim();
+    })
+		.trim();
   },
 
   /**

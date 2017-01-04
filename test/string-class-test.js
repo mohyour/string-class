@@ -11,7 +11,6 @@ describe('String Class Test', () => {
     });
 
     it('should return false if string does not contains vowel', () => {
-      assert.isFalse('hmmm'.hasVowels());
       assert.isFalse('myth'.hasVowels());
       assert.isFalse('c@t'.hasVowels());
     });
@@ -118,7 +117,6 @@ describe('String Class Test', () => {
   describe('Is Digit', () => {
     it('should return true if the string is a single digit', () => {
       assert.isTrue('3'.isDigit());
-      assert.isTrue('9'.isDigit());
     });
 
     it('should return false if the string is not a single digit', () => {
